@@ -14,8 +14,8 @@
 function countVowels(string) {
   if (string === "") return 0;
   return (
-    countVowels(string.slice(1)) + ("aeiouAEIOU".includes(string[0]) ? 1 : 0)
+    ("aeiouAEIOU".includes(string[0]) ? 1 : 0) + countVowels(string.slice(1))
   );
 }
 
-console.log(countVowels("HELLO"));
+console.log(countVowels("SANDEEP"));
